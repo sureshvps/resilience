@@ -1,0 +1,20 @@
+server:
+  port: 8761
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    region: region-1
+    healthcheck:
+      enabled: true
+    availability-zones:
+      region-1: zone1
+  instance:
+     preferIpAddress:true
+     leaseRenewalIntervalInSeconds:1
+     leaseExpirationDurationInSeconds:2
+spring:
+  boot:
+     admin:
+        context-path:"/admin"
+    
