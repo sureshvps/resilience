@@ -1,0 +1,40 @@
+<h2>Products</h2>
+<h3><a (click)="share()">Books</a></h3>
+
+
+
+
+<table mdbTable border="1">
+  <thead class="grey lighten-1 black-text">
+    <tr>
+      <th>Title</th>
+          <th>Author</th>
+          <th>Publisher</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr mdbTableCol *ngFor="let book of books">
+      <td>{{ book.title }}</td>
+		<td>{{ book.author }}</td>
+		<td>{{ book.publisher }}</td>
+		<td>
+            <a (click)="cart(book)">Add to cart</a>
+        </td>
+    </tr>
+  </tbody>
+</table>
+
+	 
+      
+
+ 
+  
+
+
+
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->

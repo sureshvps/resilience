@@ -1,0 +1,10 @@
+<h3>Order Info : {{orderResponse.status}}</h3>
+
+<div *ngIf="orderResponse.status == 'success'">
+  Your order has been placed  sucessfully
+</div>
+
+<div *ngIf="orderResponse.status == 'failed'">
+  Your order failed : {{orderResponse.errorDesc}}
+</div>
+
